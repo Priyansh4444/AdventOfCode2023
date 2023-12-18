@@ -8,6 +8,7 @@ for line in open('lines.txt'):
     x = x[2:-1]
     dr, dc = dirs["RDLU"[int(x[-1])]]
     n = int(x[:-1], 16)
+    # this converts the hex number to decimal
     b += n
     r, c = points[-1]
     points.append((r + dr * n, c + dc * n))
