@@ -34,16 +34,21 @@ def count(ranges, name = "in"):
         else:
             T = (n + 1, hi)
             F = (lo, n)
+        # check if it is between like 1-4000 and valid
         if T[0] <= T[1]:
+            # if the range is true continue execute the command
             copy = dict(ranges)
             copy[key] = T
             total += count(copy, target)
+        # check if it is between like 1-4000 and valid
         if F[0] <= F[1]:
+            # if the range is false continue to the next condition
             ranges = dict(ranges)
             ranges[key] = F
         else:
             break
     else:
+        # only if all conditions arent checked  (1,4000) then do the fallback
         total += count(ranges, fallback)
             
     return total
