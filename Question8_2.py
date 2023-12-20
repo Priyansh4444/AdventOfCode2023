@@ -1,5 +1,4 @@
 import math
-import math
 with open('lines.txt', 'r') as file:
     lines = file.readlines()
 
