@@ -42,7 +42,7 @@ cycle_lengths = {}
 
 # everything that leads to rx conjunction
 seen = {name: 0 for name, module in modules.items() if feed in module.outputs}
-
+print(modules)
 presses = 0
 
 while True:
@@ -64,6 +64,7 @@ while True:
             # we saw this x amount of times and get a hi every n times, hypothesis to checking
             if origin not in cycle_lengths:
                 cycle_lengths[origin] = presses
+                print(cycle_lengths[origin], origin)
             else:
                 assert presses == seen[origin] * cycle_lengths[origin]
                 # we should expect that the number of times we see 
