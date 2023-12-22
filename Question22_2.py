@@ -27,9 +27,11 @@ for j, upper in enumerate(bricks):
 
 total = 0
 for i in range(len(bricks)):
+    # Add every block which has a support of only one (they disintegrate the structure)
     q = deque(j for j in k_supports_v[i] if len(v_supports_k[j]) == 1)
     falling = set(q)
     falling.add(i)
+    # add i as well just incase
     
     while q:
         j = q.popleft()
