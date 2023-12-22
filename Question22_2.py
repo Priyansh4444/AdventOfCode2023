@@ -31,8 +31,7 @@ for i in range(len(bricks)):
     q = deque(j for j in k_supports_v[i] if len(v_supports_k[j]) == 1)
     falling = set(q)
     falling.add(i)
-    # add i as well just incase
-    
+    # add i as well to consider i itself
     while q:
         j = q.popleft()
         for k in k_supports_v[j] - falling:
