@@ -37,7 +37,7 @@ function getMonthName(mo) {
 }
 function logMyErrors(error) {
   console.log('Error: ', error);
-}
+} 
 try {
 // statements to try
   monthName = getMonthName(myMonth); // function could throw exception
