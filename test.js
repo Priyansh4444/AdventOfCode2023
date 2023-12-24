@@ -9,3 +9,7 @@ function foo(y, condition) {
   foo(1, true);
   
   console.log();
+  t = {}
+  if (0){
+    console.log("yo");
+  }
